@@ -4,12 +4,10 @@
 # https://blog.daveeddy.com/2015/04/13/dirname-case-study-for-bash-and-node/
 CDPATH='' cd -- "$(dirname -- "$0")/.." || exit 1
 
-code=0
-count=0
-for f in ./contributors/*.txt; do
-	((count++))
-	./tools/validate-file "$f" || code=1
-done
+files=(./contributors/*.txt)
+count=${#files[@]}
+./tools/validate-file "${files[@]}"
+code=$?
 
 echo
 echo "found $count contributors"

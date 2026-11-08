@@ -28,7 +28,8 @@ Add your entry
    OK: ./contributors/your-github-username.txt
    ```
 
-7. Commit and push your change, then open a pull request.
+7. Optionally create a new local branch.
+8. Commit and push your change, then open a pull request.
 
 Updating or removing your entry
 --------------------------------
@@ -44,10 +45,9 @@ Format
 ```
 
 Where `<username>` is a valid GitHub username and `<emoji>` is a single emoji
-(or character, or visible grapheme).
+(or visible Unicode code point).
 
-Common Issues
--------------
+### Rules
 
 - You must use your own GitHub username (the same name that authors the pull
   request).
@@ -56,8 +56,8 @@ Common Issues
   match the filename.
 - Use exactly one space between words: ex: `dave< >was< >here< >😎`.
 - The file must contain exactly one line and end with a newline.
-- The final item must be one visible Unicode grapheme (any character is also
-  valid if you're boring and hate emoji).
+- The final item must be one emoji or single Unicode code point.
+- The file must not exceed 1024 bytes.
 
 Notes
 -----
